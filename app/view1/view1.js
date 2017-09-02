@@ -132,9 +132,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
         $scope.myOrderProperty = 'name';
         $scope.pokemonTypes = ['electric', 'fire', 'grass', 'normal', 'water'];
-        $scope.alertName = (name) => {
-          $scope.pokemons.forEach(function(item) {
-            if (item.name === name) alert("Этого покемона зовут " + item.name);
-          });
+        $scope.alertName = (pokemon) => {
+            alert("Этого покемона зовут " + pokemon.name + ". Его рост " + pokemon.height);
         };
     });

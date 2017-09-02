@@ -3,9 +3,10 @@
 
 Выборка по типу:
 <select ng-model="type">
-    <option value="electric"></option>
+    <option value=""></option>
     <option ng-repeat="pokemonType in pokemonTypes" value="{{pokemonType}}">{{pokemonType}}</option>
 </select>
+
 <br><br>
 
 Сортировать по:
@@ -18,7 +19,7 @@
 
 <ul>
     <li ng-repeat="pokemon in pokemons | filter: myQuery | filter: type | orderBy: myOrderProperty">
-        <img src="{{pokemon.ThumbnailImage}}" ng-click="alertName(pokemon.name)">
+        <img src="{{pokemon.ThumbnailImage}}" ng-click="alertName(pokemon)">
 
         <small>ID #{{pokemon.id }}</small>
         <h1 ng-class="pokemon.type[0]">{{pokemon.name}}</h1>
